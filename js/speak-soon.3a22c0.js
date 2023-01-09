@@ -1,0 +1,81 @@
+(function(d){var h=[];d.loadImages=function(a,e){"string"==typeof a&&(a=[a]);for(var f=a.length,g=0,b=0;b<f;b++){var c=document.createElement("img");c.onload=function(){g++;g==f&&d.isFunction(e)&&e()};c.src=a[b];h.push(c)}}})(window.jQuery);
+var wl;
+
+var lwi=-1;function thresholdPassed(){var w=$(window).width();var p=false;var cw=0;if(w>=480){cw++;}if(w>=768){cw++;}if(w>=960){cw++;}if(w>=1200){cw++;}if(w>=1920){cw++;}if(lwi!=cw){p=true;}lwi=cw;return p;}
+!function(){if("Promise"in window&&void 0!==window.performance){var e,t,r=document,n=function(){return r.createElement("link")},o=new Set,a=n(),i=a.relList&&a.relList.supports&&a.relList.supports("prefetch"),s=location.href.replace(/#[^#]+$/,"");o.add(s);var c=function(e){var t=location,r="http:",n="https:";if(e&&e.href&&e.origin==t.origin&&[r,n].includes(e.protocol)&&(e.protocol!=r||t.protocol!=n)){var o=e.pathname;if(!(e.hash&&o+e.search==t.pathname+t.search||"?preload=no"==e.search.substr(-11)||".html"!=o.substr(-5)&&".html"!=o.substr(-5)&&"/"!=o.substr(-1)))return!0}},u=function(e){var t=e.replace(/#[^#]+$/,"");if(!o.has(t)){if(i){var a=n();a.rel="prefetch",a.href=t,r.head.appendChild(a)}else{var s=new XMLHttpRequest;s.open("GET",t,s.withCredentials=!0),s.send()}o.add(t)}},p=function(e){return e.target.closest("a")},f=function(t){var r=t.relatedTarget;r&&p(t)==r.closest("a")||e&&(clearTimeout(e),e=void 0)},d={capture:!0,passive:!0};r.addEventListener("touchstart",function(e){t=performance.now();var r=p(e);c(r)&&u(r.href)},d),r.addEventListener("mouseover",function(r){if(!(performance.now()-t<1200)){var n=p(r);c(n)&&(n.addEventListener("mouseout",f,{passive:!0}),e=setTimeout(function(){u(n.href),e=void 0},80))}},d)}}();
+
+$(function(){
+r=function(){if(thresholdPassed()){dpi=window.devicePixelRatio;if($(window).width()>=1920){var e=document.querySelector('.un252');e.setAttribute('src','images/exclude-170-1.png');
+var e=document.querySelector('.un253');e.setAttribute('src','images/philips-315.png');
+var e=document.querySelector('.un254');e.setAttribute('src','images/fedex-209-1.png');
+var e=document.querySelector('.un255');e.setAttribute('src','images/jeep-165.png');
+var e=document.querySelector('.un256');e.setAttribute('src','images/pirelli-267.png');
+var e=document.querySelector('.un257');e.setAttribute('src','images/obitcoin-275.png');
+var e=document.querySelector('.un258');e.setAttribute('src','images/jquery-257-1.png');
+var e=document.querySelector('.un259');e.setAttribute('src','images/amazon-194-1.png');
+var e=document.querySelector('.un260');e.setAttribute('src','images/hubspot-202-1.png');
+var e=document.querySelector('.un261');e.setAttribute('src','images/careem-246-1.png');
+var e=document.querySelector('.un262');e.setAttribute('src','images/canon-225-1.png');
+var e=document.querySelector('.un263');e.setAttribute('src','images/officemap-728.png');}else if($(window).width()>=1200){var e=document.querySelector('.un252');e.setAttribute('src','images/exclude-106.png');
+var e=document.querySelector('.un253');e.setAttribute('src','images/philips-195.png');
+var e=document.querySelector('.un254');e.setAttribute('src','images/fedex-130.png');
+var e=document.querySelector('.un255');e.setAttribute('src','images/jeep-103.png');
+var e=document.querySelector('.un256');e.setAttribute('src','images/pirelli-166.png');
+var e=document.querySelector('.un257');e.setAttribute('src','images/obitcoin-171.png');
+var e=document.querySelector('.un258');e.setAttribute('src','images/jquery-159.png');
+var e=document.querySelector('.un259');e.setAttribute('src','images/amazon-120.png');
+var e=document.querySelector('.un260');e.setAttribute('src','images/hubspot-125.png');
+var e=document.querySelector('.un261');e.setAttribute('src','images/careem-154.png');
+var e=document.querySelector('.un262');e.setAttribute('src','images/canon-141.png');
+var e=document.querySelector('.un263');e.setAttribute('src','images/officemap-455.png');}else if($(window).width()>=960){var e=document.querySelector('.un252');e.setAttribute('src',(dpi>1)?'images/exclude-170.png':'images/exclude-85.png');
+var e=document.querySelector('.un253');e.setAttribute('src','images/philips-157.png');
+var e=document.querySelector('.un254');e.setAttribute('src','images/fedex-104.png');
+var e=document.querySelector('.un255');e.setAttribute('src','images/jeep-82.png');
+var e=document.querySelector('.un256');e.setAttribute('src','images/pirelli-133.png');
+var e=document.querySelector('.un257');e.setAttribute('src','images/obitcoin-138.png');
+var e=document.querySelector('.un258');e.setAttribute('src','images/jquery-128.png');
+var e=document.querySelector('.un259');e.setAttribute('src','images/amazon-97.png');
+var e=document.querySelector('.un260');e.setAttribute('src','images/hubspot-101.png');
+var e=document.querySelector('.un261');e.setAttribute('src',(dpi>1)?'images/careem-246.png':'images/careem-123.png');
+var e=document.querySelector('.un262');e.setAttribute('src',(dpi>1)?'images/canon-226.png':'images/canon-113.png');
+var e=document.querySelector('.un263');e.setAttribute('src','images/officemap-364.png');}else if($(window).width()>=768){var e=document.querySelector('.un252');e.setAttribute('src',(dpi>1)?'images/exclude-136.png':'images/exclude-68.png');
+var e=document.querySelector('.un253');e.setAttribute('src',(dpi>1)?'images/philips-250.png':'images/philips-125.png');
+var e=document.querySelector('.un254');e.setAttribute('src',(dpi>1)?'images/fedex-166.png':'images/fedex-83.png');
+var e=document.querySelector('.un255');e.setAttribute('src',(dpi>1)?'images/jeep-132.png':'images/jeep-66.png');
+var e=document.querySelector('.un256');e.setAttribute('src',(dpi>1)?'images/pirelli-212.png':'images/pirelli-106.png');
+var e=document.querySelector('.un257');e.setAttribute('src',(dpi>1)?'images/obitcoin-218.png':'images/obitcoin-109.png');
+var e=document.querySelector('.un258');e.setAttribute('src',(dpi>1)?'images/jquery-204.png':'images/jquery-102.png');
+var e=document.querySelector('.un259');e.setAttribute('src',(dpi>1)?'images/amazon-154.png':'images/amazon-77.png');
+var e=document.querySelector('.un260');e.setAttribute('src',(dpi>1)?'images/hubspot-160.png':'images/hubspot-80.png');
+var e=document.querySelector('.un261');e.setAttribute('src',(dpi>1)?'images/careem-196.png':'images/careem-98.png');
+var e=document.querySelector('.un262');e.setAttribute('src',(dpi>1)?'images/canon-178.png':'images/canon-89.png');
+var e=document.querySelector('.un263');e.setAttribute('src',(dpi>1)?'images/officemap-582.png':'images/officemap-291.png');}else if($(window).width()>=480){var e=document.querySelector('.un252');e.setAttribute('src',(dpi>1)?'images/exclude-84.png':'images/exclude-42.png');
+var e=document.querySelector('.un253');e.setAttribute('src',(dpi>1)?'images/philips-160.png':'images/philips-80.png');
+var e=document.querySelector('.un254');e.setAttribute('src',(dpi>1)?'images/fedex-106.png':'images/fedex-53.png');
+var e=document.querySelector('.un255');e.setAttribute('src',(dpi>1)?'images/jeep-84.png':'images/jeep-42.png');
+var e=document.querySelector('.un256');e.setAttribute('src',(dpi>1)?'images/pirelli-136.png':'images/pirelli-68.png');
+var e=document.querySelector('.un257');e.setAttribute('src',(dpi>1)?'images/obitcoin-138-1.png':'images/obitcoin-69.png');
+var e=document.querySelector('.un258');e.setAttribute('src',(dpi>1)?'images/jquery-130.png':'images/jquery-65.png');
+var e=document.querySelector('.un259');e.setAttribute('src',(dpi>1)?'images/amazon-100.png':'images/amazon-50.png');
+var e=document.querySelector('.un260');e.setAttribute('src',(dpi>1)?'images/hubspot-102.png':'images/hubspot-51.png');
+var e=document.querySelector('.un261');e.setAttribute('src',(dpi>1)?'images/careem-124.png':'images/careem-62.png');
+var e=document.querySelector('.un262');e.setAttribute('src',(dpi>1)?'images/canon-112.png':'images/canon-56.png');
+var e=document.querySelector('.un263');e.setAttribute('src',(dpi>1)?'images/officemap-364-1.png':'images/officemap-182.png');}else{var e=document.querySelector('.un252');e.setAttribute('src',(dpi>1)?'images/exclude-56.png':'images/exclude-28.png');
+var e=document.querySelector('.un253');e.setAttribute('src',(dpi>1)?'images/philips-106.png':'images/philips-53.png');
+var e=document.querySelector('.un254');e.setAttribute('src',(dpi>1)?'images/fedex-70.png':'images/fedex-35.png');
+var e=document.querySelector('.un255');e.setAttribute('src',(dpi>1)?'images/jeep-56.png':'images/jeep-28.png');
+var e=document.querySelector('.un256');e.setAttribute('src',(dpi>1)?'images/pirelli-90.png':'images/pirelli-45.png');
+var e=document.querySelector('.un257');e.setAttribute('src',(dpi>1)?'images/obitcoin-92.png':'images/obitcoin-46.png');
+var e=document.querySelector('.un258');e.setAttribute('src',(dpi>1)?'images/jquery-86.png':'images/jquery-43.png');
+var e=document.querySelector('.un259');e.setAttribute('src',(dpi>1)?'images/amazon-66.png':'images/amazon-33.png');
+var e=document.querySelector('.un260');e.setAttribute('src',(dpi>1)?'images/hubspot-68.png':'images/hubspot-34.png');
+var e=document.querySelector('.un261');e.setAttribute('src',(dpi>1)?'images/careem-82.png':'images/careem-41.png');
+var e=document.querySelector('.un262');e.setAttribute('src',(dpi>1)?'images/canon-76.png':'images/canon-38.png');
+var e=document.querySelector('.un263');e.setAttribute('src',(dpi>1)?'images/officemap-242.png':'images/officemap-121.png');}}};
+if(!window.HTMLPictureElement){$(window).resize(r);r();}
+!function(){var e=document.querySelectorAll('a[href^="#"]');[].forEach.call(e,function(e){e.addEventListener("click",function(t){var o=0;if(e.hash.length>1){var n=parseFloat(getComputedStyle(document.body).getPropertyValue("zoom"));n||(n=1);var r=document.querySelectorAll('[name="'+e.hash.slice(1)+'"]')[0];if(!r)return;var l=/chrome/i.test(navigator.userAgent);o=l?r.getBoundingClientRect().top*n+pageYOffset:(r.getBoundingClientRect().top+pageYOffset)*n}if("scrollBehavior"in document.documentElement.style)scroll({top:o,left:0,behavior:"smooth"});else if("requestAnimationFrame"in window){var a=pageYOffset,i=null;requestAnimationFrame(function e(t){i||(i=t);var n=t-i;scrollTo(0,a<o?(o-a)*n/400+a:a-(a-o)*n/400),n<400?requestAnimationFrame(e):scrollTo(0,o)})}else scrollTo(0,o);t.preventDefault()},!1)})}();
+initMenu($('#m1')[0]);
+initMenu($('#m2')[0]);
+if(location.hash){var e=location.hash.replace("#",""),o=function(){var t=document.querySelectorAll('[name="'+e+'"]')[0];t&&t.scrollIntoView(),"0px"===window.getComputedStyle(document.body).getPropertyValue("min-width")&&setTimeout(o,100)};o()}
+
+});
